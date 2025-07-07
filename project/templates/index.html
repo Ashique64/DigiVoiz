@@ -1,0 +1,806 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DigiVoiz</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favic.ico' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/vendor/simple-line-icons.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/vendor/icofont.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/vendor/metropolis.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/vendor/material-design-iconic.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/vendor/font-awesome.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+
+    <body>
+        <!-- Modal -->
+        <div class="modal fade offcanvas-modal" id="exampleModal">
+            <div class="modal-dialog offcanvas-dialog">
+                <div class="modal-content">
+                    <div class="modal-header offcanvas-header">
+                        <a class="offcanvas-logo" href="#hero"
+                            ><img src="{% static 'assets/images/logo/lo.png' %}" alt="logo"
+                        /></a>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- offcanvas-mobile-menu start -->
+
+                    <nav id="offcanvasNav" class="offcanvas-menu">
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!-- offcanvas-mobile-menu end -->
+                </div>
+            </div>
+        </div>
+        <header id="active-sticky" class="header-section">
+            <!-- Header  Start -->
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Header Logo Start -->
+                    <div class="col">
+                        <div class="header-logo">
+                            <a href="#hero"><img src="{% static 'assets/images/logo/lo.png' %}" alt="Site Logo" /></a>
+                        </div>
+                    </div>
+                    <!-- Header Logo End -->
+
+                    <!-- Header Menu Start -->
+                    <div class="col text-end">
+                        <nav class="main-menu d-none d-lg-block">
+                            <ul class="d-flex">
+                                <li><a href="#hero">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <button class="toggle" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <span class="icon-top"></span>
+                            <span class="icon-middle"></span>
+                            <span class="icon-bottom"></span>
+                        </button>
+                    </div>
+                    <!-- Header Menu End -->
+                </div>
+            </div>
+            <!-- Header  End -->
+        </header>
+
+        <!-- Hero Slider Start -->
+        <section id="hero"  class="section position-relative">
+            <!-- hero-shape one start -->
+            <div class="hero-shape1">
+                <img src="{% static 'assets/images/slider/shape/shape1.png' %}" alt="shape" />
+            </div>
+            <!-- hero-shape one end -->
+            <!-- hero-shape two start -->
+            <div class="hero-shape2">
+                <img src="{% static 'assets/images/slider/shape/shape2.png' %}" alt="shape" />
+            </div>
+            <!-- hero-shape two end -->
+            <!-- hero-slider start -->
+            <div class="hero-slider">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="hero-slide-content">
+                                <h2 class="title animated" style="font-size: 48px">
+                                    Full Solution <br />
+                                    for your
+                                    <span class="text-decoration-underline" style="color: var(--bs-primary)">Business</span>
+                                    <br />
+                                    Development
+                                </h2>
+                                <a
+                                    href="#about"
+                                    class="btn btn-md animated delay1 btn-dark btn-hover-dark me-4 mb-3 mb-sm-0"
+                                    >Get Started</a
+                                >
+                                <a
+                                    href="#contact"
+                                    class="btn btn-md animated delay2 btn-secondary btn-hover-secondary mb-3 mb-sm-0"
+                                    >Book a Meeting</a
+                                >
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero-img scene mt-10 mt-lg-0">
+                                <div>
+                                    <img class="animated" src="{% static 'assets/images/slider/slide2.png' %}" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- hero-slider end -->
+        </section>
+        <!-- Hero Slider End -->
+
+        <!-- Brand Slider Satrt -->
+        <div id="clients" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="brand-section section-py">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="brand-carousel">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <!-- single-brand Start -->
+                                    <div class="swiper-slide">
+                                        <div
+                                            class="single-brand"
+                                            style="
+                                                width: 150px;
+                                                height: 100px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            "
+                                        >
+                                            <a class="thumb" href="#"
+                                                ><img
+                                                    src="{% static 'assets/images/client/client-3.png' %}"
+                                                    alt="brand logo"
+                                            /></a>
+                                        </div>
+                                    </div>
+                                    <!-- single-brand End -->
+
+                                    <!-- single-brand Start -->
+                                    <div class="swiper-slide">
+                                        <div
+                                            class="single-brand"
+                                            style="
+                                                width: 150px;
+                                                height: 100px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            "
+                                        >
+                                            <a class="thumb" href="#"
+                                                ><img
+                                                    src="{% static 'assets/images/client/client-2.png' %}"
+                                                    alt="brand logo"
+                                            /></a>
+                                        </div>
+                                    </div>
+                                    <!-- single-brand End -->
+
+                                    <!-- single-brand Start -->
+                                    <div class="swiper-slide">
+                                        <div
+                                            class="single-brand"
+                                            style="
+                                                width: 150px;
+                                                height: 100px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            "
+                                        >
+                                            <a class="thumb" href="#"
+                                                ><img
+                                                    style="width: 130px; height: 94px"
+                                                    src="{% static 'assets/images/client/client-4.png' %}"
+                                                    alt="brand logo"
+                                            /></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div
+                                            class="single-brand"
+                                            style="
+                                                width: 150px;
+                                                height: 100px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            "
+                                        >
+                                            <a class="thumb" href="#"
+                                                ><img
+                                                    src="{% static 'assets/images/client/client-2.png' %}"
+                                                    alt="brand logo"
+                                            /></a>
+                                        </div>
+                                    </div>
+                                    <!-- single-brand End -->
+                                </div>
+                            </div>
+                            <div class="swiper-pagination d-none"></div>
+                            <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Brand Slider End -->
+
+        <!-- Feature section Start -->
+        <section class="feature-section section-pb position-relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <img class="path-img" src="{% static 'assets/images/feature/shape.png' %}" alt="images_not_found" />
+            <div class="container custom-container">
+                <div class="row g-0 align-items-center">
+                    <!-- title section start -->
+                    <div class="col-xl-6 col-lg-8 mx-auto">
+                        <div class="title-section mb-3 text-center">
+                            <span class="sub-title">FEATURES</span>
+                            <h3 class="title">We are <span class="text-primary">different</span> because...</h3>
+                            <p class="mb-10">
+                                We’re a forward-thinking software startup focused on building user-centric digital
+                                solutions. From web to mobile, we combine innovation with purpose to turn ideas into real
+                                impact.
+                            </p>
+
+                            <a href="#services" class="btn btn-md btn-dark btn-hover-dark">Get Started</a>
+                        </div>
+                    </div>
+                    <!-- title section end -->
+
+                    <!-- feature start -->
+                    <div class="col-12">
+                        <div id="grid" class="grid row mb-n7">
+                            <div class="grid-item mb-7" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                                <div class="feature-card bg-light">
+                                    <span class="card-shape card-shape-light"></span>
+                                    <span class="card-shape card-shape-dark"></span>
+                                    <img
+                                        class="logo"
+                                        src="{% static 'assets/images/feature/logo/1.png' %}"
+                                        alt=" feature logo"
+                                    />
+                                    <h4 class="title my-6">
+                                        <a href="">Strong Security</a>
+                                    </h4>
+                                    <p>
+                                        Your data is protected with enterprise-grade security protocols and best practices.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid-item card-mt-75 mb-7" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                                <div class="feature-card bg-light active">
+                                    <span class="card-shape card-shape-light"></span>
+                                    <span class="card-shape card-shape-dark"></span>
+                                    <img
+                                        class="logo"
+                                        src="{% static 'assets/images/feature/logo/2.png' %}"
+                                        alt=" feature logo"
+                                    />
+                                    <h4 class="title my-6">
+                                        <a href="">Creative Idea</a>
+                                    </h4>
+                                    <p>
+                                        We turn innovative concepts into impactful digital solutions with fresh
+                                        perspectives.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid-item mb-7" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <div class="feature-card bg-light">
+                                    <span class="card-shape card-shape-light"></span>
+                                    <span class="card-shape card-shape-dark"></span>
+                                    <img
+                                        class="logo"
+                                        src="{% static 'assets/images/feature/logo/3.png' %}"
+                                        alt=" feature logo"
+                                    />
+                                    <h4 class="title my-6">
+                                        <a href="">Best Service</a>
+                                    </h4>
+                                    <p>
+                                        Experience top-notch support and solutions tailored to your unique business needs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- feature end -->
+                </div>
+            </div>
+        </section>
+        <!-- Feature section End -->
+
+        <!-- About Us Section Start -->
+        <section id="about" class="about-us position-relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="container">
+                <div class="row mb-n7">
+                    <!-- tile section start -->
+                    <div class="col-xl-5 col-lg-6 mb-7" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="title-section">
+                            <span class="sub-title">ABOUT US</span>
+                            <h3 class="title">
+                                Innovative <span class="text-primary">Software Solutions</span>
+                                <br class="d-none d-xl-block" />
+                                Built for the Future
+                            </h3>
+                            <span class="date-meta">Since 2024 <span class="hr"></span> </span>
+
+                            <p class="mb-5">
+                                We are a passionate team of developers, designers, and problem-solvers building impactful
+                                digital products for modern businesses.
+                            </p>
+
+                            <p class="high-light mb-8">
+                                From web platforms to mobile apps, we create scalable and user-first solutions tailored to
+                                your unique goals.
+                            </p>
+
+                            <a href="#contact" class="btn btn-md btn-dark btn-hover-dark">Contact Us</a>
+                        </div>
+                    </div>
+                    <!-- title section end -->
+                    <!-- about start -->
+                    <div class="col-xl-6 order-first order-lg-last col-lg-6 mb-7 offset-xl-1" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="about-photo scene text-center text-lg-start">
+                            <div>
+                                <img src="{% static 'assets/images/about/1.png' %}" alt="photo" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- about end -->
+                </div>
+            </div>
+            <!-- about-shape satrt -->
+            <img class="about-shape" src="{% static 'assets/images/about/shape.png' %}" alt="bg-shape" />
+            <!-- about-shape end -->
+        </section>
+        <!-- About Us Section End -->
+
+        <!-- Service Section Start -->
+        <section id="services" class="service-section section-pt position-relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8 mx-auto">
+                        <div class="title-section mb-10 pb-10 text-center">
+                            <span class="sub-title">Services</span>
+                            <h3 class="title">Explore <span class="text-primary">Our</span> Services</h3>
+                            <p>
+                                From idea to execution, we offer end-to-end digital solutions
+                                <br class="d-none d-xl-block" />
+                                to help your business grow and innovate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- second row start -->
+                <div class="row mb-n7 align-items-center">
+                    <div class="col-md-6 col-xl-4 mb-7">
+                        <div class="service-media-wrapper media-spacing-left">
+                            <!-- Web Development -->
+                            <div id="web" class="service-media align-items-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                                <i class="bx bx-code-alt bx-lg text-primary me-3"></i>
+                                <div class="service-media-body">
+                                    <h4 class="title"><a href="">Web Development</a></h4>
+                                    <p>We build fast, responsive, and scalable websites tailored to your business needs.</p>
+                                </div>
+                            </div>
+
+                            <!-- App Development -->
+                            <div id="app" class="service-media align-items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <i class="bx bx-mobile-alt bx-lg text-primary me-3"></i>
+                                <div class="service-media-body">
+                                    <h4 class="title"><a href="">App Development</a></h4>
+                                    <p>We develop seamless mobile apps with intuitive UX for Android and iOS platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Middle Image (optional, you can remove it if not needed) -->
+                    <div class="col-xl-4 mb-7 order-md-1 order-xl-0">
+                        <div class="service-media-img text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                            <img src="{% static 'assets/images/service/media.png' %}" alt="images_not_found" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 mb-7">
+                        <div class="service-media-wrapper media-spacing-right">
+                            <!-- Branding -->
+                            <div id="branding" class="service-media align-items-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                                <i class="bx bx-paint bx-lg text-primary me-3"></i>
+                                <div class="service-media-body">
+                                    <h4 class="title"><a href="">Branding</a></h4>
+                                    <p>We craft strong brand identities that resonate with your target audience.</p>
+                                </div>
+                            </div>
+
+                            <!-- SEO -->
+                            <div id="seo" class="service-media align-items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <i class="bx bx-trending-up bx-lg text-primary me-3"></i>
+                                <div class="service-media-body">
+                                    <h4 class="title"><a href="">SEO</a></h4>
+                                    <p>Improve your visibility and ranking with data-driven SEO strategies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- second row end -->
+            </div>
+        </section>
+        <!-- Service Section ENd -->
+
+        <!-- Funfact Section Start -->
+        <section class="funfact-section section-pb position-relative mt-10 pt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <div class="container">
+                <div class="row mb-n7">
+                    <!-- fanfact satrt -->
+                    <div class="col-md-3 col-6 mb-7">
+                        <div class="fanfact text-start d-flex align-items-center justify-content-center">
+                            <span class="title me-2" style="color: var(--bs-primary); font-size: 50px"
+                                ><span class="counter">2</span>+</span
+                            >
+                            <h6
+                                class="sub-title"
+                                style="
+                                    text-transform: uppercase;
+                                    line-height: 1.3;
+                                    font-weight: 700;
+                                    color: var(--bs-gray-700);
+                                "
+                            >
+                                Years Experience
+                            </h6>
+                        </div>
+                    </div>
+                    <!-- fanfact end -->
+                    <!-- fanfact satrt -->
+                    <div class="col-md-3 col-6 mb-7">
+                        <div class="fanfact text-start d-flex align-items-center justify-content-center">
+                            <span class="title me-2" style="color: var(--bs-primary); font-size: 50px"
+                                ><span class="counter">98</span>%</span
+                            >
+                            <h6
+                                class="sub-title"
+                                style="
+                                    text-transform: uppercase;
+                                    line-height: 1.3;
+                                    font-weight: 700;
+                                    color: var(--bs-gray-700);
+                                "
+                            >
+                                Satisfied Clients
+                            </h6>
+                        </div>
+                    </div>
+                    <!-- fanfact end -->
+                    <!-- fanfact satrt -->
+                    <div class="col-md-3 col-6 mb-7">
+                        <div class="fanfact text-start d-flex align-items-center justify-content-center">
+                            <span class="title me-2" style="color: var(--bs-primary); font-size: 50px">
+                                <span class="counter">8</span>+</span
+                            >
+                            <h6
+                                class="sub-title"
+                                style="
+                                    text-transform: uppercase;
+                                    line-height: 1.3;
+                                    font-weight: 700;
+                                    color: var(--bs-gray-700);
+                                "
+                            >
+                                Professional Employees
+                            </h6>
+                        </div>
+                    </div>
+                    <!-- fanfact end -->
+                    <!-- fanfact satrt -->
+                    <div class="col-md-3 col-6 mb-7">
+                        <div class="fanfact text-start d-flex align-items-center justify-content-center">
+                            <span class="title me-2" style="color: var(--bs-primary); font-size: 50px">
+                                <span class="counter">20</span>+</span
+                            >
+                            <h6
+                                class="sub-title"
+                                style="
+                                    text-transform: uppercase;
+                                    line-height: 1.3;
+                                    font-weight: 700;
+                                    color: var(--bs-gray-700);
+                                "
+                            >
+                                Projects done
+                            </h6>
+                        </div>
+                    </div>
+                    <!-- fanfact end -->
+                </div>
+            </div>
+            <svg class="funfact-svg" id="funfact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 535">
+                <path
+                    class="funfact-path"
+                    d="M1950,327.309S1666,1.64,1336,111.4,906,290.324,671,164.377,120.868,57.118-64,225.351"
+                />
+                <path
+                    id="Shape_5_copy"
+                    data-name="Shape 5 copy"
+                    class="funfact-path"
+                    d="M1919.04,532.448s-223.79-369.607-567.75-318.167-454.362,102.4-664.214-62.038S163.566-47.917-47.473,86.059"
+                />
+            </svg>
+        </section>
+        <!-- Funfact Section End -->
+
+        <!-- Team Section Start -->
+        <section class="team-section section-pb overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="container position-relative">
+                <div class="row align-items-center">
+                    <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="title-section">
+                            <span class="sub-title">TEAM</span>
+                            <h3 class="title">People <span class="text-primary">Behind</span> the Screen</h3>
+                            <p class="mb-5">
+                                Meet the passionate minds turning ideas into powerful digital solutions. Our team brings
+                                creativity, technical skill, and a shared vision for innovation.
+                            </p>
+                            <p class="high-light mb-8">
+                                From product ideation to development and strategy, we work together to craft technology that
+                                truly delivers.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="new-team-members">
+                            <div class="new-team-members-list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <img src="{% static 'assets/images/team/rounded-img1.png' %}" alt="images" />
+                                <h3 class="title"><a href="">Musthakeem</a></h3>
+                                <span>Head of Idea</span>
+                            </div>
+                            <div class="new-team-members-list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                <img src="{% static 'assets/images/team/rounded-img3.png' %}" alt="images" />
+                                <h3 class="title"><a href="">Ashique</a></h3>
+                                <span>Head of HR</span>
+                            </div>
+                            <div class="new-team-members-list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                                <img src="{% static 'assets/images/team/3.png' %}" alt="images" />
+                                <h3 class="title"><a href="">Basil Jose</a></h3>
+                                <span>Head of Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section End -->
+        <!-- Contact Section Start -->
+        <section id="contact" class="contact-section section-pb position-relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="container">
+                <div class="row mb-n7">
+                    <div class="col-lg-6 mb-7">
+                        <div class="title-section">
+                            <span class="sub-title">CONTACT US</span>
+                            <h3 class="title">Get in <span class="text-primary">Touch</span> with Us</h3>
+                            <p class="mb-5">
+                                Have questions or want to discuss your project? Our team is here to help. Reach out to us
+                                today and let’s explore how we can work together to bring your ideas to life.
+                            </p>
+                            <p class="high-light mb-8">
+                                Whether you need a consultation, project quote, or just want to say hello, we’d love to hear
+                                from you.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-7">
+                        <div class="contact-photo scene">
+                            <div>
+                                <img src="{% static 'assets/images/contact/1.png' %}" alt="photo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mt-3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="contact-form">
+                            <form id="contact-form" method="post" action="{% url 'contact' %}">
+                                {% csrf_token %}
+                                <div class="row mb-n7">
+                                    <div class="col-md-6 mb-7">
+                                        <div class="form-group">
+                                            <label for="name">Your Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="name"
+                                                name="name"
+                                                placeholder="Enter your name"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-7">
+                                        <div class="form-group">
+                                            <label for="email">Your Email</label>
+                                            <input
+                                                type="email"
+                                                class="form-control"
+                                                id="email"
+                                                name="email"
+                                                placeholder="Enter your email"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-7">
+                                        <div class="form-group">
+                                            <label for="subject">Subject</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="subject"
+                                                name="subject"
+                                                placeholder="Enter subject"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-7">
+                                        <div class="form-group">
+                                            <label for="phone">Your Phone</label>
+                                            <input
+                                                type="tel"
+                                                class="form-control"
+                                                id="phone"
+                                                name="phone"
+                                                placeholder="Enter your phone number"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-7">
+                                        <div class="form-group">
+                                            <label for="message">Your Message</label>
+                                            <textarea
+                                                class="form-control"
+                                                id="message"
+                                                name="message"
+                                                rows="5"
+                                                placeholder="Type your message here"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+
+        <footer class="footer-section">
+            <div class="footer-top position-relative">
+                <img class="footer-shape" src="{% static 'assets/images/footer/1.png' %}" alt="shape" />
+                <div class="container">
+                    <div class="row mb-n7">
+                        <div class="col-lg-3 col-sm-6 mb-7">
+                            <div class="footer-widget">
+                                <a class="footer-logo mb-9" href="index.html">
+                                    <img src="assets/images/logo/logo-footer.png" alt="footer-logo" />
+                                </a>
+                                <p>
+                                    We build smart digital solutions that empower your business to grow, connect, and thrive
+                                    in the digital world.
+                                </p>
+                                <ul class="footer-social-links">
+                                    <li>
+                                        <a class="footer-social-link" href="#"><i class="icofont-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="footer-social-link" href="#"><i class="icofont-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="footer-social-link" href="#"><i class="icofont-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="footer-social-link" href="#"><i class="icofont-whatsapp"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-7 offset-xl-1">
+                            <div class="footer-widget">
+                                <h4 class="title">Quick Link</h4>
+                                <ul class="footer-menu">
+                                    <li><a class="footer-link" href="#about">About us</a></li>
+                                    <li><a class="footer-link" href="#clients">Our Clients</a></li>
+                                    <li><a class="footer-link" href="#contact">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-6 mb-7">
+                            <div class="footer-widget">
+                                <h4 class="title">Services</h4>
+                                <ul class="footer-menu">
+                                    <li><a class="footer-link" href="#web">Web Development</a></li>
+                                    <li><a class="footer-link" href="#app">App Development</a></li>
+                                    <li><a class="footer-link" href="#branding">Branding</a></li>
+                                    <li><a class="footer-link" href="#seo">SEO Services</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-7">
+                            <div class="footer-widget">
+                                <h4 class="title">Contact info</h4>
+                                {% comment %}
+                                <p>245 Southern Street, Apt. 147 New York, USA</p>
+                                {% endcomment %}
+                                <ul class="address">
+                                    <li>
+                                        <a class="address-link" href="tel:+12354569874">+12354 569 874</a>
+                                    </li>
+                                    <li>
+                                        <a class="address-link" href="tel:+98745612398">+98745 612 398</a>
+                                    </li>
+                                    <li>
+                                        <a class="address-link" href="mailto:info@example.com">info@example.com</a>
+                                    </li>
+                                    <li>
+                                        <a class="address-link" href="mailto:info@example.com">www.example.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- coppy right satrt -->
+            <div class="copy-right-section" style="background-color: var(--bs-gray-900)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright-info text-center">
+                                <p>
+                                    Copyright &copy; <span id="currentYear"></span> Made with
+                                    <i class="icofont-heart-alt"></i> By <a href="" target="_blank"> DigiVoiz</a>, All
+                                    Rights Reserved
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- coppy right end -->
+        </footer>
+
+        <!-- Scripts -->
+        <!-- Global Vendor, plugins JS -->
+        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- Vendor JS -->
+
+        <script src="{% static 'assets/js/vendor/vendor.min.js' %}"></script>
+        <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/parallax.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/plugins.min.js' %}"></script>
+        <script src="{% static 'assets/js/ajax-contact.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+    </body>
+</html>
